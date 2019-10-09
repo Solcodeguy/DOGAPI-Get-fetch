@@ -6,7 +6,8 @@ function getDogImages(numImg) {
         .then(response => response.json())
         .then(responseJson =>
             displayResults(responseJson, numImg))
-        .catch(error => alert('Something went wrong. Try again later.'));
+    if numImg > 50;
+    .catch(error => alert('Something went wrong. Try again later.'));
 }
 
 function displayResults(responseJson, numImg) {
