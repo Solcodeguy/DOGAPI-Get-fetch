@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Select 1-50 random dog images">
-        <title>Dog API Assignment 1</title>
-        <link rel="stylesheet" href="index.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div class="container">
-            <h1>Dog API: Assignment 1</h1>
-            <form>
-                <label for="numImages">Enter the number of images you want (between 1 and 50): </label>    
-                <input type="text" id="numImages" name="numImages" class="js-img-input" placeholder="3" required>  
-                <input type="submit" value="Get dog pictures!" class="submit-button">
-            </form>
-            <section class="results hidden">
-            </section>
-        </div> 
-        <script src="index.js"></script>
-    </body>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DOG API:Get Fetch assignment 1/2 </title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <header>
+        <span class="banner-text">DOG API: A Simple Example!</span>
+    </header>
+
+    <main>
+        <div>How many dogs would you like to see?</div>
+        <form id="dog-form">
+            <input id="dog-input" type="text" name="dog-number">
+            <input type="submit" name="submit">
+        </form>
+        <div>*Pick a number between 1 and 50. If you dont pick any number, three random dogs will be selected.</div>
+        <section>
+            <div class="dog-image-results"></div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
 </html>
