@@ -1,13 +1,17 @@
 'use strict';
 
 function getDogImages(numImg) {
-    if numImg < 51;
-    fetch(`https://dog.ceo/api/breeds/image/random/${numImg}`)
-        .then(response => response.json())
-        .then(responseJson =>
-            displayResults(responseJson, numImg))
-    if numImg > 50;
-    .catch(error => alert('Something went wrong. Try again later.'));
+
+    if (numImg <= 0 || numImg > 50) {
+        throw "Image not found"
+    };
+
+    fetch(`https://dog.ceo/api/breeds/image/random/${numImg}`).then(response => {
+        response.json()
+        displayResults(responseJson, numImg)
+    }).catch(error => {
+        alert('Something went wrong. Try again later.')
+    });
 }
 
 function displayResults(responseJson, numImg) {
